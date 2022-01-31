@@ -1,3 +1,22 @@
+const aboutMeLink = document.querySelector('.about-me-link')
+const skillsLink = document.querySelector('.skills-link')
+const contactLink = document.querySelector('.contact-link')
+
+aboutMeLink.addEventListener('click', (e) => {
+    e.preventDefault()
+    window.scrollTo(0, 3210)
+})
+
+skillsLink.addEventListener('click', (e) => {
+    e.preventDefault()
+    window.scrollTo(0, 4118)
+})
+
+contactLink.addEventListener('click', (e) => {
+    e.preventDefault()
+    window.scrollTo(0, 5260)
+})
+
 document.addEventListener('scroll', () => {
     let pagePosition = document.documentElement.scrollTop
 
@@ -22,10 +41,17 @@ document.addEventListener('scroll', () => {
                 link.classList.add('scroll-location-2')
             })
             break
-        case (pagePosition > 3532):
+        case (pagePosition > 3532 && pagePosition < 4884):
             links.forEach(link => {
                 link.classList.remove('scroll-location-2')
+                link.classList.remove('scroll-location-4')
                 link.classList.add('scroll-location-3')
+            })
+            break
+        case (pagePosition > 4884):
+            links.forEach(link => {
+                link.classList.remove('scroll-location-3')
+                link.classList.add('scroll-location-4')
             })
             break
         default:
@@ -44,3 +70,5 @@ document.addEventListener('keypress', (e) => {
         console.log(pagePosition)
     }
 })
+
+// window.scrollTo(0,document.body.scrollHeight);

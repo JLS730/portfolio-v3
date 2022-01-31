@@ -25,6 +25,9 @@ const aboutMeDescription = document.querySelector('.about-me-description')
 const skillsSectionTitle = document.querySelector('.skills-section-title')
 const skillsContainer = document.querySelector('.skills-container')
 
+const contactSectionTitle = document.querySelector('.contact-section-title')
+const contactContainer = document.querySelector('.contact-container')
+
 gsap.from(navigationLinks, {x: 200, opacity: 0, duration: 1})
 gsap.from(introductionTop, { delay: 1, opacity: 0, duration: 1})
 gsap.from(introductionMiddle, { delay: 1.5, opacity: 0, duration: 1})
@@ -98,6 +101,14 @@ function portfolioAnimations(scrollTriggerPosition) {
             skillsContainer.classList.add('active')
             
         }, 1000)
+    }
+
+    if(scrollTriggerPosition > 4742) {
+        contactSectionTitle.classList.add('active')
+
+        setTimeout(() => {
+            contactContainer.classList.add('active')
+        }, 700)
     }
 }
 

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     // background-color: green;
@@ -33,6 +37,8 @@ body {
         font-family: 'Montserrat', sans-serif;
 
         .link {
+            text-decoration: none;
+            color: white;
             cursor: pointer;
             transition: all .3s ease-in-out;
         }
@@ -52,6 +58,11 @@ body {
         .link.scroll-location-3:hover {
             color: orange;
         }
+        .link.scroll-location-4:hover {
+            color: rgb(158, 0, 158);
+        }
+        
+
     }
 }
 
@@ -408,6 +419,114 @@ body {
     .skills-container.active {
         animation: slide-in-up 2s ease forwards;
     }
+}
+
+.contact-section {
+    width: 100%;
+    height: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+
+    .contact-section-title {
+        width: 930px;
+        height: 200px;
+        display: flex;
+        justify-content: flex-start;
+        align-self: flex-start;
+        font-size: 90px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        color: white;
+        margin-top: 470px;
+        padding-left: 100px;
+        opacity: 0;
+        transform: translateX(200);
+
+        .contact-section-title-about {
+            color: rgb(158, 0, 158);
+            padding: 0 20px;
+        }
+    }
+    .contact-section-title.active {
+        animation: slide-in-right 2s ease forwards;
+    }
+
+    .contact-container {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(200);
+        opacity: 0;
+
+
+        .contact-form {
+            width: 1200px;
+            height: 450px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(8, 8, 8);
+            border: 2px solid rgb(158, 0, 158);
+            
+
+            .contact-name-and-email {
+                width: 1000px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // background-color: blue;
+
+                input {
+                    height: 35px;
+                    width: 450px;
+                    font-size: 18px;
+                    padding: 0 10px;
+                    border: 2px solid rgb(158, 0, 158);
+                    background-color: rgb(8, 8, 8);
+                    color: white;
+                    outline: none;
+                }
+            }
+
+            .contact-information {
+                width: 1000px;
+                font-size: 18px;
+                font-family: 'Montserrat', sans-serif;
+                padding: 10px;
+                border: 2px solid rgb(158, 0, 158);
+                background-color: rgb(8, 8, 8);
+                color: white;
+                outline: none;
+            }
+
+            .contact-submit-button {
+                align-self: flex-start;
+                width: 250px;
+                height: 35px;
+                border: 1px solid black;
+                font-size: 18px;
+                margin-left: 100px;
+                border: 2px solid rgb(158, 0, 158);
+                color: #8e8e8e;
+                background-color: rgb(8, 8, 8);
+                transition: all .4s ease;
+            }
+            .contact-submit-button:hover {
+                background-color: rgb(158, 0, 158);
+                color: white;
+            }
+        }
+    }
+    .contact-container.active {
+        animation: slide-in-right 2s ease forwards;
+    }
+
 }
 
 @keyframes slide-in-left {

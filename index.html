@@ -16,15 +16,25 @@
     <body>
         <nav class="navigation-bar">
             <ul class="navigation-links">
-                <li class="link">Home</li>
-                <li class="link">Portfolio</li>
-                <li class="link">About</li>
-                <li class="link">Skills</li>
-                <li class="link">Contact</li>
+                <a class="link home-link" href="#introduction-container">
+                    <li>Home</li>
+                </a>
+                <a class="link portfolio-link" href="#portfolio-section">
+                    <li>Portfolio</li>
+                </a>
+                <a class="link about-me-link" href="#">
+                    <li>About</li>
+                </a> 
+                <a class="link skills-link" href="#">
+                    <li>Skills</li>
+                </a>
+                <a class="link contact-link" href="#">
+                    <li>Contact</li>
+                </a>
             </ul>
         </nav>
         
-        <section class="introduction-container">
+        <section class="introduction-container" id="introduction-container">
             <div class="introduction">
                 <div class="introduction-text">
                     <span class="introduction-top">Hello.</span>
@@ -38,7 +48,7 @@
             </div>
         </section>
         
-        <section class="portfolio-section">
+        <section class="portfolio-section" id="portfolio-section">
             <span class="portfolio-title">Some of My <span class="portfolio-title-work">Work</span></span>
             <section class="portfolio">
                 <div class="project-containers project-container-1">
@@ -90,7 +100,7 @@
             </section>
         </section>
         
-        <section class="about-me-section">
+        <section class="about-me-section" id="about-me-section">
             <span class="about-me-section-title">A Little <span class="about-me-section-title-about">About</span> Me</span>
             <div class="about-me-container">
                 <div class="about-me-image-container"></div>
@@ -104,7 +114,7 @@
             </div>
         </section>
         
-        <section class="skills-section">
+        <section class="skills-section" id="skills-section">
             <span class="skills-section-title">What I <span class="skills-section-title-about">Know</span></span>
             <div class="skills-container">
                 <div class="skills skill-1">
@@ -135,6 +145,20 @@
                     <img src="./images/skills-images/git.png" alt="" class="skills-image">
                     <span class="skill-name">Git</span>
                 </div>
+            </div>
+        </section>
+        
+        <section class="contact-section" id="contact-section">
+            <span class="contact-section-title">Keep in <span class="contact-section-title-about">Touch</span></span>
+            <div class="contact-container">
+                <form action="" class="contact-form">
+                    <div class="contact-name-and-email">
+                        <input type="text" class="name-input" placeholder="Your Name *">
+                        <input type="text" class="email-input" placeholder="Email Address *">
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" class="contact-information" placeholder="Leave a Question..."></textarea>
+                    <button class="contact-submit-button" type="submit">Send Your <span>Message</span> *</button>
+                </form>
             </div>
         </section>
 
